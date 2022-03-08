@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/css/fonts.css">
+    <link rel="stylesheet" href="../common/css/header.css">
+    <link rel="stylesheet" href="../common/css/footer.css">
+    <link rel="stylesheet" href="./css/alarmmanage.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- sidebar -->
+        <div class="sidebar_wrapper">
+
+            <!-- top -->
+            <div class="top_menu">
+                <div class="title">
+                    <div class="logo">
+                        <img src="../common/images/logo.png" alt="">
+                    </div>
+                </div>
+
+                <div class="sidebar_list">
+                    <ul>
+                        <li class="list"><a href="../apistate/apistate.html"><span>API 사용통계</span></a></li>
+                        <li class="list"><a href="../titleusage/tileusage.html"><span>TILE 사용통계</span></a></li>
+                        <li class="list"><a href="../apidetail/apidetail.html"><span>API 사용상세</span></a></li>
+                        <li class="list"><a href="../apiusagedetail/apiusagedetail.html"><span>API 사용상세통계</span></a></li>
+                        <li class="list"><a href="../alarmsetting/alarmsetting.html"><span>API 알람 설정</span></a></li>
+                        <li class="list"><a href="../apialarm/apialarm.html"><span>API 알람 발생 이력</span></a></li>
+                        <li class="list clicked"><a href="../alarmmanage/alarmmanage.html"><span>API 알람 대상자 관리</span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- sidebar bg -->
+        <div class="sidebar_bg"></div>
+
+        <!-- main section -->
+        <div class="section">
+
+            <!-- tablet header -->
+            <div class="tablet_header">
+
+                <div class="left_menu">
+
+                    <!-- 햄버거 -->
+                    <div class="ham_bar" id="tabletBar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!-- logo -->
+                    <div class="tablet_logo">
+                        <img src="./image/tablet_logo.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="right_menu">
+                    <div class="user">
+                        <span class="id">ID-STUDIOSK</span>
+
+                        <div class="logout">
+                            <span>로그아웃</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- section -->
+            <div class="section_wrapper">
+                <!-- api 통계 -->
+                <div class="api_total">
+                    <div class="section_top">
+
+                        <!-- title -->
+                        <div class="title">
+                            <span>API 알람 대상자 관리</span>
+                        </div>
+
+                        <!-- user -->
+                        <div class="user">
+                            <ul>
+                                <li>
+                                    <span class="id">ID-STUDIOSK</span>
+                                    <div class="logout">
+                                        <span>로그아웃</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- section body -->
+                    <div class="section_body">
+
+                        <!-- chart -->
+                        <div class="chart_wrapper">
+                            <div class="chart_hr">
+
+                                <div class="calendar_wrapper">
+
+                                    <!-- top -->
+                                    <div class="calander_date">
+
+                                        <div class="user_search_wrapper">
+                                            
+                                            <!-- search -->
+                                            <div class="user_search">
+                                                
+                                                <!-- name -->
+                                                <div class="search_input">
+                                                    <label for="">이름 :</label>
+                                                    <input type="text" placeholder="이름">
+                                                </div>
+                                        
+                                                <!-- 전화 -->
+                                                <div class="search_input">
+                                                    <label for="">전화번호 :</label>
+                                                    <input type="text" placeholder="전화번호">
+                                                </div>
+                                        
+                                                <!-- 이메일 -->
+                                                <div class="search_input">
+                                                    <label for="">이메일 :</label>
+                                                    <input type="text" placeholder="이메일">
+                                                    <span class="at">@</span>
+                                                </div>
+
+                                                <div class="search_input">
+                                                    <input class="email_input" type="text">
+                                                </div>
+
+                                                <!-- 이메일주소 -->
+                                                <div class="api_select select_fn">
+                                                    <ul class="">
+                                                        <li class="select_value ">
+                                                            <span class="api_value">선택하세요</span>
+                                                            <ul class="select_ul api_ul">
+                                                                <li class="api_list self">직접입력</li>
+                                                                <li class="api_list select_list">naver.com</li>
+                                                                <li class="api_list select_list">googoel.com</li>
+                                                                <li class="api_list select_list">nate.com</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        
+                                            </div>
+
+                                            <!-- 적용 -->
+                                            <div class="submit_wrapper">
+                                                <button>적용하기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- bottom -->
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- api table -->
+                        <div class="api_table_wrapper">
+                            <table>
+
+                                <!-- 헤더 -->
+                                <thead>
+                                    <tr>
+                                        <th>이름</th>
+                                        <th>전화번호</th>
+                                        <th>이메일</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+
+                                <!-- 바디 -->
+                                <tbody>
+                                    <tr>
+                                        <td><span class="user_name">김아무개</span></td>
+                                        <td><span class="user_tel">01088889999</span></td>
+                                        <td><span class="user_email">studiok300@gmail.com</span></td>
+                                        <td><span class="trash">삭제<img src="./image/trash.svg" alt=""></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="user_name">김아무개</span></td>
+                                        <td><span class="user_tel">01088889999</span></td>
+                                        <td><span class="user_email">studiok300@gmail.com</span></td>
+                                        <td><span class="trash">삭제<img src="./image/trash.svg" alt=""></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="user_name">김아무개</span></td>
+                                        <td><span class="user_tel">01088889999</span></td>
+                                        <td><span class="user_email">studiok300@gmail.com</span></td>
+                                        <td><span class="trash">삭제<img src="./image/trash.svg" alt=""></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="user_name">김아무개</span></td>
+                                        <td><span class="user_tel">01088889999</span></td>
+                                        <td><span class="user_email">studiok300@gmail.com</span></td>
+                                        <td><span class="trash">삭제<img src="./image/trash.svg" alt=""></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="user_name">김아무개</span></td>
+                                        <td><span class="user_tel">01088889999</span></td>
+                                        <td><span class="user_email">studiok300@gmail.com</span></td>
+                                        <td><span class="trash">삭제<img src="./image/trash.svg" alt=""></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="user_name">김아무개</span></td>
+                                        <td><span class="user_tel">01088889999</span></td>
+                                        <td><span class="user_email">studiok300@gmail.com</span></td>
+                                        <td><span class="trash">삭제<img src="./image/trash.svg" alt=""></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="user_name">김아무개</span></td>
+                                        <td><span class="user_tel">01088889999</span></td>
+                                        <td><span class="user_email">studiok300@gmail.com</span></td>
+                                        <td><span class="trash">삭제<img src="./image/trash.svg" alt=""></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="user_name">김아무개</span></td>
+                                        <td><span class="user_tel">01088889999</span></td>
+                                        <td><span class="user_email">studiok300@gmail.com</span></td>
+                                        <td><span class="trash">삭제<img src="./image/trash.svg" alt=""></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="user_name">김아무개</span></td>
+                                        <td><span class="user_tel">01088889999</span></td>
+                                        <td><span class="user_email">studiok300@gmail.com</span></td>
+                                        <td><span class="trash">삭제<img src="./image/trash.svg" alt=""></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="user_name">김아무개</span></td>
+                                        <td><span class="user_tel">01088889999</span></td>
+                                        <td><span class="user_email">studiok300@gmail.com</span></td>
+                                        <td><span class="trash">삭제<img src="./image/trash.svg" alt=""></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- page nav 영역 -->
+                        <div class="page_nav">
+                            <ul>
+                                <!-- 
+                                    게시판의 < 또는 > 다음 숫자가 없을떈 li 에 end 클래스 추가
+                                 -->
+                                <li class="prev end"><svg width="5" height="8" viewBox="0 0 5 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.480163 4.48006C0.386368 4.38639 0.333613 4.25929 0.333496 4.12673V3.8734C0.335032 3.74112 0.387573 3.61454 0.480163 3.52006L3.90683 0.100064C3.96942 0.0369601 4.05462 0.00146484 4.1435 0.00146484C4.23238 0.00146484 4.31757 0.0369601 4.38016 0.100064L4.8535 0.573398C4.91621 0.63484 4.95154 0.718938 4.95154 0.806731C4.95154 0.894524 4.91621 0.978622 4.8535 1.04006L1.88683 4.00006L4.8535 6.96006C4.9166 7.02265 4.9521 7.10785 4.9521 7.19673C4.9521 7.28561 4.9166 7.37081 4.8535 7.4334L4.38016 7.90006C4.31757 7.96317 4.23238 7.99866 4.1435 7.99866C4.05462 7.99866 3.96942 7.96317 3.90683 7.90006L0.480163 4.48006Z"
+                                            fill="#BCBCBC" />
+                                    </svg>
+                                </li>
+                                <li class="active">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li class="prev"><svg width="5" height="8" viewBox="0 0 5 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.51984 4.48006C4.61363 4.38639 4.66639 4.25929 4.6665 4.12673V3.8734C4.66497 3.74112 4.61243 3.61454 4.51984 3.52006L1.09317 0.100064C1.03058 0.0369601 0.945383 0.00146484 0.856504 0.00146484C0.767625 0.00146484 0.682426 0.0369601 0.619837 0.100064L0.146504 0.573398C0.0837943 0.63484 0.0484561 0.718938 0.0484561 0.806731C0.0484561 0.894524 0.0837943 0.978622 0.146504 1.04006L3.11317 4.00006L0.146504 6.96006C0.0833994 7.02265 0.0479042 7.10785 0.0479042 7.19673C0.0479042 7.28561 0.0833994 7.37081 0.146504 7.4334L0.619837 7.90006C0.682426 7.96317 0.767625 7.99866 0.856504 7.99866C0.945383 7.99866 1.03058 7.96317 1.09317 7.90006L4.51984 4.48006Z"
+                                            fill="#BCBCBC" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../common/plugins/jQuery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="./js/alarmmanage.js"></script>
+</body>
+
+</html>
